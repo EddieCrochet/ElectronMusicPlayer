@@ -23,6 +23,7 @@ namespace ElectronMusicPlayer
         {
             app.UseMvc(routes =>
             {
+                //this maps the app to use MVC routing
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{Id?}");
