@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ElectronNET.API;
+using ElectronNET.API.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -29,15 +31,21 @@ namespace ElectronMusicPlayer
                     template: "{controller=Home}/{action=Index}/{Id?}");
             });
 
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
+            Bootstrap();
+        }
 
-            app.Run(async (context) =>
+        //This method opens an electron window for us upon startup
+        public async void Bootstrap()
+        {
+            var options = new BrowserWindowOptions
             {
-                await context.Response.WriteAsync("Hello World!");
-            });
+                WebPreferences = new WebPreferences
+                {
+                    WebSecurity = false
+                }
+            };
+
+            await Electron.WindowManager.CreateWindowAsync(options);
         }
     }
 }
