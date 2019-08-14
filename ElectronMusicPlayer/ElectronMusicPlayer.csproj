@@ -9,12 +9,24 @@
   </ItemGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
     <PackageReference Include="ElectronNET.API" Version="5.22.12" />
     <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.7" />
+=======
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0"/>
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="ElectronNET.CLI" Version="*"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ElectronNET.API" Version="0.0.11" />
+>>>>>>> 743ce4548a1135ed2dff4daecb79f20aaa30a1a5
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
     <DotNetCliToolReference Include="ElectronNET.CLI" Version="*" />
   </ItemGroup>
+
 
 </Project>
