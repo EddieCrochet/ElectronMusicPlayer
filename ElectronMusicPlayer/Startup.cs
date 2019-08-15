@@ -34,33 +34,16 @@ namespace ElectronMusicPlayer
             Bootstrap();
         }
 
-        //This method opens an electron window for us upon startup
+        //this method is supposed to open up a window with electron
         public async void Bootstrap()
         {
             var options = new BrowserWindowOptions
             {
-<<<<<<< HEAD
-=======
-                await context.Response.WriteAsync("Hello World!");
-            });
-
-            Bootstrap();
-        }
-
-        public async void Bootstrap()
-        {
-            var options = new BrowserWindowOptions
-            {
->>>>>>> 743ce4548a1135ed2dff4daecb79f20aaa30a1a5
                 WebPreferences = new WebPreferences
                 {
                     WebSecurity = false
                 }
             };
-<<<<<<< HEAD
-
-=======
->>>>>>> 743ce4548a1135ed2dff4daecb79f20aaa30a1a5
             await Electron.WindowManager.CreateWindowAsync(options);
         }
     }
